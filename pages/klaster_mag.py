@@ -4,7 +4,6 @@ import pandas as pd
 from pages import utils
 import matplotlib.pyplot as plt
 import seaborn as sns
-from sklearn.cluster import DBSCAN
 from sklearn import metrics
 from sklearn.preprocessing import StandardScaler
 from sklearn.cluster import KMeans
