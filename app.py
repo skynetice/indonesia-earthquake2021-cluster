@@ -1,6 +1,7 @@
 import streamlit as st
 from multiapp import MultiApp
-import page1, klaster_lokasi, klaster_mag from './pages'
+from pages import page1, klaster_lokasi, klaster_mag
+
 
 
 app = MultiApp()
