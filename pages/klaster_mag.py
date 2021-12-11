@@ -10,7 +10,7 @@ from sklearn.preprocessing import StandardScaler
 from sklearn.cluster import KMeans
 
 def app():
-    data = pd.read_csv('../data_clean.csv')
+    data = pd.read_csv('data_clean.csv')
 
     df = data.drop(data[data['M'] < 4].index)
     df.reset_index(drop=True)
