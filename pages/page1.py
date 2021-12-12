@@ -14,7 +14,24 @@ def app():
     st.write("""
        
     """)
+    #####################################################################
+    code_0 = ''' 
+    data = pd.read_csv('data_clean.csv')
 
+    df = data.drop(data[data['M'] < 4].index)
+    df.reset_index(drop=True)
+
+    n = folium.Map(location=(-00.7893000, 116.9213000), zoom_start=4.2)
+
+    for i in range(len(df)):
+        folium.Circle(
+            location=[df.iloc[i]['Lat'], df.iloc[i]['Lon']],
+            radius=10,
+        ).add_to(n)'''
+    
+    st.code(code_0, language='python')
+    ####################################################################
+    
     data = pd.read_csv('data_clean.csv')
 
     df = data.drop(data[data['M'] < 4].index)
@@ -29,6 +46,7 @@ def app():
         ).add_to(n)
 
     folium_static(n,width=800, height=500)
+    
     st.write("""
     Plot diatas menampilkan data gempa bumi yang terjadi di indonesia dengan magnitudo diatas 4 skala richter. 
 
