@@ -8,8 +8,13 @@ from sklearn.cluster import DBSCAN
 from sklearn import metrics
 from sklearn.preprocessing import StandardScaler
 from sklearn.cluster import KMeans
+from PIL import Image
 
 def app():
+    
+    image = Image.open('header.png')
+    st.image(image, caption='Mircocredential_logo')
+    
     st.write("""
     # Klasterisasi Gempa Bumi di Indonesia Selama 2021
 
