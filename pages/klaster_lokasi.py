@@ -13,7 +13,7 @@ def app():
     st.title('Klasterisasi Berdasarkan Lokasi Terjadinya Gempa Bumi')
 
     st.write("""
-    Klasterisasi lokasi terjadinya gempa bumi di Indonesia dilakukan menggunakan algoritma *DBScan*.
+    Klasterisasi lokasi terjadinya gempa bumi di Indonesia dilakukan menggunakan algoritma **DBScan**.
 
     Algoritma ini dipilih karena menghasilkan dapat menghasilkan klaster yang cukup baik.
     """)

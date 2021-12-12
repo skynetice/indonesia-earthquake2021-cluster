@@ -13,7 +13,7 @@ def app():
     st.title('Klasterisasi Berdasarkan Magnitudo dan Kedalaman Gempa Bumi')
 
     st.write("""
-    Klasterisasi berdasarkan magnitudo dan kedalaman gempa bumi di Indonesia dilakukan menggunakan algoritma *KNN*.
+    Klasterisasi berdasarkan magnitudo dan kedalaman gempa bumi di Indonesia dilakukan menggunakan algoritma **KNN**.
 
     """)
 
