@@ -10,6 +10,14 @@ from sklearn.preprocessing import StandardScaler
 from sklearn.cluster import KMeans
 
 def app():
+    st.title('Klasterisasi Berdasarkan Lokasi Terjadinya Gempa Bumi')
+
+    st.write("""
+    Klasterisasi lokasi terjadinya gempa bumi di Indonesia dilakukan menggunakan algoritma *DBScan*.
+
+    Algoritma ini dipilih karena menghasilkan dapat menghasilkan klaster yang cukup baik.
+    """)
+
     data = pd.read_csv('data_clean.csv')
 
     df = data.drop(data[data['M'] < 4].index)
@@ -37,3 +45,9 @@ def app():
 
     
     st.pyplot(plt)
+
+    st.write("""
+    Gambar diatas merupakan klasterisasi yang berhasil dibuat dengan menggunakan algoritma DBScan dengan nilai eps=2.5 dan min_sample=55 klasterisasi dengan DBScan dan parameter tersebut menghasilkan 4 klaster.
+    
+    Adapun titik hitam pada beberapa sudut klaster merupakan titik yang dianggap sebagai noise sehingga tidak termasuk kedalam klaster
+    """)

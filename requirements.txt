@@ -6,3 +6,4 @@ sklearn
 matplotlib
 folium
 streamlit_folium
+regex
