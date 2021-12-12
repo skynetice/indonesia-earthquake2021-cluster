@@ -16,6 +16,20 @@ def app():
     Klasterisasi berdasarkan magnitudo dan kedalaman gempa bumi di Indonesia dilakukan menggunakan algoritma **KNN**.
 
     """)
+    
+    code = '''def hello():
+         print("kmeans = KMeans(n_clusters = 3, init = 'k-means++', random_state = 0)")
+         print("y_kmeans = kmeans.fit_predict(data_cluster_mag
+         
+         plt.scatter(data_cluster_mag[y_kmeans == 0, 0], data_cluster_mag[y_kmeans == 0, 1], s = 10, c = 'blue', label = 'Cluster 1')
+         plt.scatter(data_cluster_mag[y_kmeans == 1, 0], data_cluster_mag[y_kmeans == 1, 1], s = 10, c = 'red', label = 'Cluster 2')
+         plt.scatter(data_cluster_mag[y_kmeans == 2, 0], data_cluster_mag[y_kmeans == 2, 1], s = 10, c = 'magenta', label = 'Cluster 3')
+         plt.scatter(kmeans.cluster_centers_[:, 0], kmeans.cluster_centers_[:, 1], s = 100, c = 'yellow', label = 'Centroids')
+         plt.title('Cluster gempa bumi di indonesia 2021 dengan KNN n=3')
+         plt.xlabel('Kedalaman (Depth)')
+         plt.ylabel('Magnitudo (M)')
+         plt.legend()"))'''
+    st.code(code, language='python')
 
     data = pd.read_csv('data_clean.csv')
 
@@ -27,7 +41,6 @@ def app():
     kmeans = KMeans(n_clusters = 3, init = 'k-means++', random_state = 0)
     y_kmeans = kmeans.fit_predict(data_cluster_mag)
 
-    
     
     plt.scatter(data_cluster_mag[y_kmeans == 0, 0], data_cluster_mag[y_kmeans == 0, 1], s = 10, c = 'blue', label = 'Cluster 1')
     plt.scatter(data_cluster_mag[y_kmeans == 1, 0], data_cluster_mag[y_kmeans == 1, 1], s = 10, c = 'red', label = 'Cluster 2')
@@ -56,9 +69,26 @@ def app():
     Adapun jumlah anggota dalam klaster dapat dilihat pada piechart berikut
 
 
-
     """)
+    
+    code_1 = '''def hello():
+         print("    df['cluster'] = y_kmeans
 
+                    klaster_count = df['cluster'].value_counts()
+                    plt.figure(figsize=(4, 4))
+                    plt.pie(klaster_count,
+                            labels=['dangkal', 'sedang', 'dalam'],
+                            autopct='%1.1f%%',
+                            colors=['#D53032', '#E67F0D', '#93C572'],
+                            explode=[0.2, 0, 0],
+                            shadow=True)
+                    plt.title('')
+                    plt.xlabel('')
+                    plt.ylabel('')
+                    plt.show()")'''
+
+    st.code(code_1, language='python')
+    
 
     df['cluster'] = y_kmeans
 
