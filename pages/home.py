@@ -13,7 +13,7 @@ from PIL import Image
 def app():
     
     image = Image.open('header.png')
-    st.image(image, caption='Mircocredential_logo')
+    st.image(image)
     
     st.write("""
     # Klasterisasi Gempa Bumi di Indonesia Selama 2021
