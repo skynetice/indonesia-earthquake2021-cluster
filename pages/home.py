@@ -20,6 +20,8 @@ def app():
     - Muhammad Rhayhan Akbar
 
     #### Kelompok 8 ITS05
+
+    Github : [indonesia-earthquake2021-cluster](https://github.com/skynetice/indonesia-earthquake2021-cluster)
     
     """)
 
